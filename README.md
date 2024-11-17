@@ -7,4 +7,4 @@ lawofattraction
 给我一个星球 去除杂质 锤炼根基
 
 
-daily manifesting tool
+daily manifesting planner tool 
