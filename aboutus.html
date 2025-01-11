@@ -1,33 +1,129 @@
-<section class="about-us" id="about-us" style="padding: 4rem 0; background: rgba(255, 255, 255, 0.05);">
+<head>
+    <style>
+        /* Existing styles (keep these) */
+       .about-us {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-heading {
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-content {
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 15px;
+          padding: 2rem;
+          margin-bottom: 2rem;
+        }
+
+        .bio-heading {
+            color: #ffd700;
+            margin-bottom: 1rem;
+        }
+
+        .bio-text {
+            color: #fff;
+        }
+        .author-image {
+          width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 1.5rem;
+           object-fit: cover;
+          background: linear-gradient(45deg, #ffb6c1, #ffd700);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        .author-meta {
+           display: flex;
+           align-items: flex-start;
+           gap: 1.5rem;
+        }
+
+       .social-links {
+          display: flex;
+          gap: 1rem;
+         margin-top: 1rem;
+        }
+
+        .social-links a {
+         color: #fff;
+         text-decoration: none;
+         transition: color 0.3s ease;
+        }
+       .social-links a:hover {
+         color: #ffd700;
+       }
+        .disclaimer {
+            color: #ff6b6b;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<section class="about-us" id="about-us">
     <div class="container">
-        <h2 style="color: #ffd700; text-align: center; margin-bottom: 2rem;">About The Art of Manifestation</h2>
-        <div style="background: rgba(255, 255, 255, 0.08); border-radius: 15px; padding: 2rem;">
-            <h3 style="color: #ffd700; margin-bottom: 1rem;">Our Mission</h3>
-            <p style="color: #fff;">At The Art of Manifestation, we are dedicated to providing a comprehensive and accessible guide to the world of manifestation. Our aim is to empower individuals to understand and utilize various manifestation techniques to achieve their personal goals and create the life they desire. We believe in combining time-tested methods with insights from science and personal experiences to offer practical and effective guidance.</p>
+        <h2 class="section-heading">About The Art of Manifestation</h2>
+        <div class="section-content">
+            <h3 class="bio-heading">Our Mission</h3>
+            <p class="bio-text">At The Art of Manifestation, our mission is to empower you with a clear understanding of the Law of Attraction and other manifestation techniques. We believe that everyone has the ability to shape their own reality, and we're here to provide you with the knowledge and tools to do just that. Our aim is to provide practical, effective guidance, combining proven methods with scientific insights and personal experiences.
+            </p>
         </div>
-
-        <div style="margin-top: 2rem; background: rgba(255, 255, 255, 0.08); border-radius: 15px; padding: 2rem;">
-            <h3 style="color: #ffd700; margin-bottom: 1rem;">Author Bio: wanghaisheng</h3>
-            <div style="display: flex; gap: 2rem; align-items: start;">
+        <div class="section-content">
+            <h3 class="bio-heading">Author Bio: wanghaisheng</h3>
+            <div class="author-meta">
+                 <img src="author_placeholder.png" alt="Author Image" class="author-image">
                 <div>
-                    <p style="color: #fff;">
-                        This blog post is written by <span style="font-weight: bold;">wanghaisheng</span>, a technology enthusiast and lifelong learner from China. With a background in the health information industry and a passion for open-source technologies, wanghaisheng is on a journey of personal growth and exploration. <a href="https://github.com/wanghaisheng" target="_blank" style="color: #ffd700; text-decoration: none;">[GitHub Profile]</a>
+                     <p class="bio-text">
+                         This blog post is written by <span style="font-weight: bold;">wanghaisheng</span>, a technology enthusiast and lifelong learner from China. With a background in the health information industry and a passion for open-source technologies, wanghaisheng is on a journey of personal growth and exploration.
+                        <a href="https://github.com/wanghaisheng" target="_blank" class="bio-link">[GitHub Profile]</a>
                     </p>
-                    <p style="color: #fff;">Having spent time in the tech world and now exploring different paths, wanghaisheng has become interested in self-improvement and the concept of manifestation as a means to achieve personal goals. He believes that <span style="font-style: italic;">"If you would not be forgotten as soon as you are dead, either write something worth reading, or do something worth writing,"</span> and hopes this article will be worth reading.</p>
+                   <p class="bio-text">Having spent time in the tech world, wanghaisheng is now exploring the path of self-improvement and manifestation, believing they are essential tools for achieving personal goals and a fulfilling life.  He aims to provide clarity on various manifestation methods and help people use them effectively. He believes that <span style="font-style: italic;">"If you would not be forgotten as soon as you are dead, either write something worth reading, or do something worth writing,"</span> and hopes this article will be worth reading.
+                    </p>
                 </div>
-                <!-- You could add a placeholder for an author image here if desired -->
-            </div>
+             </div>
         </div>
 
-        <div style="margin-top: 2rem; background: rgba(255, 255, 255, 0.08); border-radius: 15px; padding: 2rem;">
-            <h3 style="color: #ffd700; margin-bottom: 1rem;">Connect With Us</h3>
-            <p style="color: #fff;">We encourage you to join our community and share your manifestation journey. Connect with us through our social media channels or feel free to leave comments and questions on our articles.</p>
-            <div class="social-links" style="display: flex; gap: 1rem; margin-top: 1rem;">
-                <a href="#" style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#fff'">Discord</a>
-                <a href="#" style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#fff'">Forum</a>
-                <a href="#" style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#fff'">Facebook</a>
-                <a href="#" style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#fff'">Instagram</a>
+        <div class="section-content">
+            <h3 class="bio-heading">Connect With Us</h3>
+            <p class="bio-text">We encourage you to join our community and share your manifestation journey. Connect with us through our social media channels or feel free to leave comments and questions on our articles.</p>
+            <div class="social-links">
+                <a href="#">Discord</a>
+                <a href="#">Forum</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
             </div>
+          </div>
+        <div class="section-content">
+             <h3 class="bio-heading">Disclaimer</h3>
+                <p class="disclaimer">Please note that the information provided on this website is for informational and educational purposes only and is not intended as a substitute for professional advice. Manifestation is a belief-based practice, and results are not guaranteed. We strongly recommend seeking guidance from a qualified professional for any personal, financial, or medical decisions.</p>
+         </div>
+        <div class="section-content">
+             <h3 class="bio-heading">Privacy Policy</h3>
+                <p class="bio-text">We respect your privacy and are committed to protecting your personal data. While we do not directly collect your personal data, we use third party web analytics tools, to provide a better user experience for our website. If you provide your data through a contact form or any similar methods, we will use your information to provide a response and resolve any related issues. We do not share any personal information with any other third-party organizations or individuals. We do not use cookies. Please review our third-party services providers privacy policy if you have concerns about how your data might be handled by them.</p>
+          </div>
+
+       <div class="section-content">
+             <h3 class="bio-heading">Terms of Service</h3>
+                <p class="bio-text">By using this website, you agree to abide by these terms of service. The content on this site is intended for informational and educational purposes. We do not guarantee any specific outcome from using the manifestation methods described on this website. We are not liable for any direct or indirect damages arising from your use of this website and related content. We have the right to change any of this terms of service at any time without prior notice. It is your responsibility to review these terms regularly. We are not responsible for third-party websites linked in our content. Use this website at your own risk.</p>
+       </div>
+      <div class="section-content">
+           <h3 class="bio-heading">External Citations</h3>
+            <p class="bio-text">Our content is based on a blend of both popular and theoretical understanding of the Law of Attraction, which are explained below:</p>
+              <ul class="resource-list">
+              <li> <a  style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#fff'" href="https://www.law-of-attraction-guide.com/">Law of Attraction Guide</a></li>
+              <li> <a style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#fff'" href="https://www.thetahealing.com/what-is-thetahealing.html">Theta Healing</a></li>
+              <li> <a style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffd700'" onmouseout="this.style.color='#fff'" href="https://www.mindvalley.com/blog/law-of-attraction/">MindValley Law of Attraction Blog</a></li>
+               </ul>
         </div>
     </div>
 </section>
