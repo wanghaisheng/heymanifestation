@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const defaultlang='en'
 const locales = ['', 'en', 'fr', 'zh', 'es', 'de'];  // Define available locales
 const baseDir = path.join(__dirname, '/');  // Base directory where the files are located
 const baseUrl = 'https://heymanifestation.com';  // Your base URL
@@ -22,8 +22,12 @@ function listHtmlFiles(dir) {
 
 // Generate a list of all HTML files across all language folders
 const allHtmlFiles = locales.flatMap(locale => {
+    if (!locale=defaultlang){
+        
     const localeDir = path.join(baseDir, locale);
     return listHtmlFiles(localeDir).map(file => path.join(locale, path.relative(localeDir, file)).replace(/\\+/g, '/'));
+    }
+        
 });
 
 // Build the sitemap, ensuring that index.html files do not include /index.html in the URL
