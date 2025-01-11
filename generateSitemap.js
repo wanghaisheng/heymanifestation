@@ -22,7 +22,7 @@ function listHtmlFiles(dir) {
 
 // Generate a list of all HTML files across all language folders
 const allHtmlFiles = locales.flatMap(locale => {
-    if (!locale=defaultlang){
+    if (locale!==defaultlang){
         
     const localeDir = path.join(baseDir, locale);
     return listHtmlFiles(localeDir).map(file => path.join(locale, path.relative(localeDir, file)).replace(/\\+/g, '/'));
