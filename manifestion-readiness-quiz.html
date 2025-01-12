@@ -1,0 +1,185 @@
+<head>
+    <style>
+       .readiness-test {
+            padding: 4rem 0;
+            background-color: #171a33;
+           color: #e5e5e5;
+        }
+
+        .test-intro {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .test-grid {
+          max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+
+        .test-card {
+            background-color: #292d4c;
+            padding: 20px;
+            border-radius: 8px;
+          margin: 1rem;
+        }
+
+        .test-card h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+
+        .quiz-container {
+            margin-top: 15px;
+        }
+
+        .quiz-question p{
+          margin-bottom: 10px;
+        }
+
+        .question-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+             gap: 10px;
+            justify-content: space-between;
+
+        }
+
+        .question-item label {
+            flex: 1;
+        }
+      .question-item input{
+          flex: 1;
+      }
+        .belief-score,
+        .self-score {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #ffdd30;
+        }
+      input[type="range"] {
+        -webkit-appearance: none;
+          width: 100%;
+           height: 10px; /* for slider height */
+            background: #4a4e70;
+            border-radius: 5px;
+            outline: none;
+           -webkit-transition: .2s;
+          transition: opacity .2s;
+      }
+       input[type="range"]:hover {
+            opacity: 1;
+       }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+          width: 15px;
+          height: 15px;
+          background: #ffdd30;
+          cursor: pointer;
+          border-radius: 50%;
+
+      }
+
+      input[type="range"]::-moz-range-thumb {
+          width: 15px;
+          height: 15px;
+          background: #ffdd30;
+           cursor: pointer;
+           border-radius: 50%;
+       }
+
+    </style>
+</head>
+<section class="readiness-test">
+  <div class="container">
+    <h2>Are You Ready for These Techniques?</h2>
+    <p class="test-intro">Engaging with these techniques involves these areas:</p>
+    <div class="test-grid">
+      <div class="test-card">
+        <h3>1. Belief in Manifestation</h3>
+        <p>This quiz may help you assess your current view on manifestation.</p>
+        <p>Please note that there are no right or wrong answers. This is purely for your own self-assessment.</p>
+        <div class="quiz-container">
+          <div class="quiz-question">
+            <p>Rate your agreement with each statement (1-5):</p>
+            <div class="question-item">
+              <label>I believe thoughts can influence reality</label>
+              <input type="range" min="1" max="5" class="belief-slider" data-slider-type="belief">
+            </div>
+            <div class="question-item">
+              <label>I believe in the law of attraction</label>
+              <input type="range" min="1" max="5" class="belief-slider" data-slider-type="belief">
+            </div>
+            <div class="question-item">
+              <label>I believe the universe may respond to intentions</label>
+              <input type="range" min="1" max="5" class="belief-slider" data-slider-type="belief">
+            </div>
+          </div>
+          <div class="belief-score">Your Belief Score: <span id="beliefScore">0</span>/15</div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <h3>2. Self-Belief Assessment</h3>
+        <p>Evaluate your level of self-belief using this quick test. This is purely for self-assessment, not a determinant of future success.</p>
+        <div class="quiz-container">
+          <div class="quiz-question">
+            <p>Rate your agreement with each statement (1-5):</p>
+            <div class="question-item">
+              <label>I believe I may deserve good things</label>
+              <input type="range" min="1" max="5" class="self-slider" data-slider-type="self">
+            </div>
+            <div class="question-item">
+              <label>I trust in my ability to achieve goals</label>
+              <input type="range" min="1" max="5" class="self-slider" data-slider-type="self">
+            </div>
+            <div class="question-item">
+              <label>I feel worthy of my desires</label>
+              <input type="range" min="1" max="5" class="self-slider" data-slider-type="self">
+            </div>
+          </div>
+          <div class="self-score">Your Self-Belief Score: <span id="selfScore">0</span>/15</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const beliefSliders = document.querySelectorAll('.belief-slider');
+      const selfSliders = document.querySelectorAll('.self-slider');
+      const beliefScoreSpan = document.getElementById('beliefScore');
+      const selfScoreSpan = document.getElementById('selfScore');
+
+
+    function updateScores(){
+          let beliefScore = 0;
+          beliefSliders.forEach(slider => {
+           beliefScore += parseInt(slider.value);
+            });
+           beliefScoreSpan.textContent = beliefScore;
+          let selfScore = 0;
+          selfSliders.forEach(slider =>{
+           selfScore += parseInt(slider.value);
+           });
+          selfScoreSpan.textContent = selfScore;
+
+        }
+         beliefSliders.forEach(slider =>{
+            slider.addEventListener('input', updateScores);
+          })
+           selfSliders.forEach(slider =>{
+            slider.addEventListener('input', updateScores);
+          })
+    });
+  </script>
