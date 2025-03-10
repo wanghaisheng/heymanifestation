@@ -1,4 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manifestation Readiness Quiz - Test Your Manifestation Mindset | HeyManifestation</title>
+    <meta name="description" content="Take our manifestation readiness quiz to assess your mindset and discover your potential for successful manifestation. Get personalized insights and recommendations." />
+    <meta name="keywords" content="manifestation quiz, manifestation readiness, manifestation mindset, self-assessment, belief test, manifestation potential, law of attraction quiz" />
+    <meta property="og:title" content="Manifestation Readiness Quiz - Test Your Manifestation Mindset | HeyManifestation">
+    <meta property="og:description" content="Take our manifestation readiness quiz to assess your mindset and discover your potential for successful manifestation. Get personalized insights and recommendations." />
+    <meta property="og:url" content="https://heymanifestation.com/manifestion-readiness-quiz">
+    <meta property="og:type" content="website">
     <style>
        .readiness-test {
             padding: 4rem 0;
@@ -100,7 +111,22 @@
 
     </style>
 </head>
-<section class="readiness-test">
+<body>
+    <nav class="menu">
+        <div class="menu-container">
+            <div class="menu-links">
+                <a href="/" class="menu-link">Home</a>
+                <a href="/manifestion-guide.html" class="menu-link">Guide</a>
+                <a href="/manifestion-tools.html" class="menu-link">Tools</a>
+                <a href="/Manifest-Writing-Methods.html" class="menu-link">Writing Methods</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Manifestation Readiness Quiz</h1>
+        <p class="test-intro">Before diving into manifestation practices, it's helpful to understand where you currently stand. This quiz will help you assess your mindset and readiness for manifestation work.</p>
+    <section class="readiness-test">
   <div class="container">
     <h2>Are You Ready for These Techniques?</h2>
     <p class="test-intro">Engaging with these techniques involves these areas:</p>
@@ -183,3 +209,57 @@
           })
     });
   </script>
+
+        <div class="related-resources">
+            <h2>Next Steps</h2>
+            <div class="test-grid">
+                <div class="test-card">
+                    <h3>Complete Guide to Manifestation</h3>
+                    <p>Learn the fundamental principles and techniques of manifestation.</p>
+                    <a href="/manifestion-guide.html" class="btn">Read the Guide</a>
+                </div>
+                <div class="test-card">
+                    <h3>Writing Methods</h3>
+                    <p>Discover powerful manifestation writing techniques like the 369 method and scripting.</p>
+                    <a href="/Manifest-Writing-Methods.html" class="btn">Learn Writing Methods</a>
+                </div>
+                <div class="test-card">
+                    <h3>Manifestation Tools</h3>
+                    <p>Access our collection of manifestation tools and resources.</p>
+                    <a href="/manifestion-tools.html" class="btn">Explore Tools</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const beliefSliders = document.querySelectorAll('.belief-slider');
+      const selfSliders = document.querySelectorAll('.self-slider');
+      const beliefScoreSpan = document.getElementById('beliefScore');
+      const selfScoreSpan = document.getElementById('selfScore');
+
+
+    function updateScores(){
+          let beliefScore = 0;
+          beliefSliders.forEach(slider => {
+           beliefScore += parseInt(slider.value);
+            });
+           beliefScoreSpan.textContent = beliefScore;
+          let selfScore = 0;
+          selfSliders.forEach(slider =>{
+           selfScore += parseInt(slider.value);
+           });
+          selfScoreSpan.textContent = selfScore;
+
+        }
+         beliefSliders.forEach(slider =>{
+            slider.addEventListener('input', updateScores);
+          })
+           selfSliders.forEach(slider =>{
+            slider.addEventListener('input', updateScores);
+          })
+    });
+  </script>
+</body>
+</html>

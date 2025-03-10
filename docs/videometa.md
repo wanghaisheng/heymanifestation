@@ -9,3 +9,9 @@ manifest reddit 标题提取 评论提取
 
 
 
+https://twocups.heymanifestation.com
+
+
+https://369.heymanifestation.com/
+
+mirror.heymanifestation.com

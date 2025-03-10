@@ -48,6 +48,16 @@ const sitemap = [
     { loc: '/', changefreq: 'daily', priority: '1.0' },
     ...uniqueUrls.map(file => {
         const fileWithoutExtension = file.replace('.html', '');
+        // 为重要页面设置更高的优先级和更新频率
+        const isImportantPage = [
+            '/369-manifestation-method-digital-handwritten-guide',
+            '/Manifest-Writing-Methods',
+            '/manifestation-methods-for-love',
+            '/manifestion-guide'
+        ].includes(`/${fileWithoutExtension}`);
+        const isLanguageRoot = ['fr', 'zh', 'es', 'de'].some(lang => 
+            fileWithoutExtension === lang || fileWithoutExtension.startsWith(`${lang}/`)
+        );
         const loc = fileWithoutExtension.endsWith('index')
             ? `/${fileWithoutExtension.split('/').slice(0, -1).join('/')}`
             : `/${fileWithoutExtension}`;
